@@ -4,6 +4,7 @@
         <title>Minecraft Family Server</title>
         <link rel='icon' href='favicon.ico' type='image/x-icon'/ >
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="discord/discordInvite.css"/>
     </head>
 
     <body>
@@ -38,7 +39,16 @@
                         <li><b>Client Minecraft</b> - Seule la version <b>Java</b> est support&eacute;e. Pensez &agrave; toujours bien aligner la version de votre client avec celle du serveur.<br>
                             La version exacte du client est inscrite dans la description du serveur :<br><img src="images/multiplayer-ingame-server-info.png" class="thumbnail-img"></li>
                         <li><b>Serveur Minecraft</b> - Seuls les joueurs membres de la Whitelist du serveur Minecraft peuvent se connecter.</li>
-                        <li><b><a href="https://discord.gg/tUnGWUFXv7">Discord</a></b> - Seuls les joueurs autoris&eacute;s peuvent int&eacute;ragir avec la communaut&eacute; de joueurs.</li>
+                        <li><b>Discord</b> - Seuls les joueurs autoris&eacute;s peuvent int&eacute;ragir avec la communaut&eacute; de joueurs.</li>
+                        <div id="discordInviteBox"></div>
+                        <script src="discord/discordInvite.js"></script>
+                        <script>
+                            discordInvite.init({
+                            inviteCode: 'tUnGWUFXv7',
+                            title: 'Minecraft Family',
+                            });
+                            discordInvite.render();
+                        </script>
                     </ul>
                     <div class="adresseIP">
                         <h3>Adresse du serveur Minecraft</h3>
