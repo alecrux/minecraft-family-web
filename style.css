@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Minecraft';
+    src: url('fonts/Minecraft.ttf');
+}
+
 body {
     margin: 0;
     margin-top: 50px;
@@ -41,6 +46,29 @@ section {
     background-repeat: no-repeat; /* Add this line */
     background-attachment: fixed; /* Add this line */
 }
+
+
+.copyIP {
+    width: 310px;
+    color: #0c0c0e;
+    padding-left: 25px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    font-family: Minecraft;
+}
+
+.copyIP_tooltip {
+    display: none;
+    text-align: center;
+    font-size: small;
+}
+
+
+.copyIP:hover  .copyIP_tooltip {
+    display: block;
+    color: rgb(78, 78, 78);
+}
+
 
 #minehome .profile-img {
     width: 300px;

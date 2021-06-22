@@ -40,8 +40,34 @@
                         <li><b>Serveur Minecraft</b> - Seuls les joueurs membres de la Whitelist du serveur Minecraft peuvent se connecter.</li>
                         <li><b><a href="https://discord.gg/tUnGWUFXv7">Discord</a></b> - Seuls les joueurs autoris&eacute;s peuvent int&eacute;ragir avec la communaut&eacute; de joueurs.</li>
                     </ul>
-                    <h3>Adresse du serveur Minecraft</h3>
-                    <p>server.minecraft-family.ca</p>
+                    <div class="adresseIP">
+                        <h3>Adresse du serveur Minecraft</h3>
+                        <p>
+                            <div class="copyIP" id="copy" data-server="server.minecraft-family.ca">SERVER.MINECRAFT-FAMILY.CA
+                                <div class="copyIP_tooltip" id="tooltip">Clique moi pour copier l'IP</div>
+                            </div>
+                        </p>
+                        <script type="text/javascript" >
+                            var copy = document.getElementById("copy"); 
+                            var tooltip = document.getElementById("tooltip"); 
+                    
+                            copy.onclick = function() { 
+                                document.execCommand("copy"); 
+                                tooltip.innerText = "Copié !";
+                            };
+                            copy.onpointerleave = function() { 
+                                document.execCommand("copy"); 
+                                tooltip.innerText = "Clique moi pour copier l'IP";
+                            };    
+                            copy.addEventListener("copy", function(event) { 
+                                event.preventDefault(); 
+                                if (event.clipboardData) { 
+                                event.clipboardData.setData("text/plain", copy.dataset.server);
+                                console.log(event.clipboardData.getData("text"))
+                                };
+                            });
+                        </script>
+                     </div>
                     <h3>Carte dynamique du monde</h3>
                     <p><a href="/mcmap/">Minecraft Overviewer</a></p>
                     <p>Pour ajouter un marqueur sur la carte (base, ferme, point d'int&eacute;r&#x000EAt &agrave; visiter...)
@@ -100,7 +126,7 @@
             </section>
         </main>
         <footer>
-             Built quickly, but with love by Freetonio, server operator
+             Built quickly, but with love by Freetonio, server operator. <br> With the help of Nilon
         </footer>
     </body>
 </html>
