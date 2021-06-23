@@ -54,7 +54,7 @@
                         <h3>Adresse du serveur Minecraft</h3>
                         <p>
                             <div class="copyIP" id="copy" data-server="server.minecraft-family.ca">SERVER.MINECRAFT-FAMILY.CA
-                                <div class="copyIP_tooltip" id="tooltip">Clique moi pour copier l'IP</div>
+                                <div class="copyIP_tooltip" id="tooltip">Clique-moi pour copier l'adresse du serveur</div>
                             </div>
                         </p>
                         <script type="text/javascript" >
@@ -63,11 +63,11 @@
                     
                             copy.onclick = function() { 
                                 document.execCommand("copy"); 
-                                tooltip.innerText = "Copié !";
+                                tooltip.innerText = "Copi&eacute; !";
                             };
                             copy.onpointerleave = function() { 
                                 document.execCommand("copy"); 
-                                tooltip.innerText = "Clique moi pour copier l'IP";
+                                tooltip.innerText = "Clique-moi pour copier l'adresse du serveur";
                             };    
                             copy.addEventListener("copy", function(event) { 
                                 event.preventDefault(); 
