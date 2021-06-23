@@ -33,7 +33,8 @@
                         les outils additionnels &agrave; votre disposition
                     </p>
                     <h3>Statut du serveur</h3>
-                    <img src="https://mcapi.us/server/image?ip=server.minecraft-family.ca">
+                    <img src="https://mcapi.us/server/image?ip=server.minecraft-family.ca" alt="Sorry! Image not available at this time" 
+                    onError="this.onerror=null;this.src='';">
                     <h3>Pr&eacute;requis pour se connecter au serveur Minecraft</h3>
                     <dir class="ulParent">
                         <dir class="list">
@@ -68,11 +69,11 @@
                     
                             copy.onclick = function() { 
                                 document.execCommand("copy"); 
-                                tooltip.innerText = "Copi&eacute !";
+                                tooltip.innerText = "Copi&eacute; !";
                             };
                             copy.onpointerleave = function() { 
                                 document.execCommand("copy"); 
-                                tooltip.innerText = "Clique moi pour copier l'adresse du serveur";
+                                tooltip.innerText = "Clique-moi pour copier l'adresse du serveur";
                             };    
                             copy.addEventListener("copy", function(event) { 
                                 event.preventDefault(); 
