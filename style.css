@@ -49,6 +49,7 @@ ul {
 .list {
     padding-top: 2.5px;
     padding-bottom: 2.5px;
+    padding-inline-start: 0px;
 }
 
 hr { 
