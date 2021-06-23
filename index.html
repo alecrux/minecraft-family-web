@@ -33,22 +33,26 @@
                         les outils additionnels &agrave; votre disposition
                     </p>
                     <h3>Statut du serveur</h3>
-                    <img src="https://mcapi.us/server/image?ip=server.minecraft-family.ca">
+                    <img src="https://mcapi.us/server/image?ip=server.minecraft-family.ca" alt="Sorry! Image not available at this time" 
+                    onError="this.onerror=null;this.src='';">
                     <h3>Pr&eacute;requis pour se connecter au serveur Minecraft</h3>
                     <ul>
                         <li><b>Client Minecraft</b> - Seule la version <b>Java</b> est support&eacute;e. Pensez &agrave; toujours bien aligner la version de votre client avec celle du serveur.<br>
                             La version exacte du client est inscrite dans la description du serveur :<br><img src="images/multiplayer-ingame-server-info.png" class="thumbnail-img"></li>
                         <li><b>Serveur Minecraft</b> - Seuls les joueurs membres de la Whitelist du serveur Minecraft peuvent se connecter.</li>
                         <li><b>Discord</b> - Seuls les joueurs autoris&eacute;s peuvent int&eacute;ragir avec la communaut&eacute; de joueurs.</li>
-                        <div id="discordInviteBox"></div>
-                        <script src="discord/discordInvite.js"></script>
-                        <script>
-                            discordInvite.init({
-                            inviteCode: 'tUnGWUFXv7',
-                            title: 'Minecraft Family',
-                            });
-                            discordInvite.render();
-                        </script>
+                        <div class="discord" id="discordInviteBox">
+                            <script src="discord/discordInvite.js"></script>
+                            <script>
+                                discordInvite.init({
+                                inviteCode: 'tUnGWUFXv7',
+                                title: 'Minecraft Family',
+                                });
+                                discordInvite.render();
+                            </script>
+                        </div>
+                        
+                       
                     </ul>
                     <div class="adresseIP">
                         <h3>Adresse du serveur Minecraft</h3>

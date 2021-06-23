@@ -47,6 +47,9 @@ section {
     background-attachment: fixed; /* Add this line */
 }
 
+.discord {
+    margin-top: 5px;
+}
 
 .copyIP {
     width: 310px;
@@ -55,12 +58,15 @@ section {
     cursor: pointer;
     letter-spacing: 2px;
     font-family: Minecraft;
+    text-shadow: 1px 1px 0 #7A7A7A;
 }
 
 .copyIP_tooltip {
     display: none;
     text-align: center;
     font-size: small;
+    font-family: Garamond, serif;
+    text-shadow: 0px 0px;
 }
 
 
@@ -77,6 +83,7 @@ section {
 
 #technicalities .thumbnail-img {
     height: 100px;
+    margin-top: 5px;
     border-radius: 25px;
 }
 
