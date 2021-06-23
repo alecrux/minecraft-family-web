@@ -151,6 +151,7 @@ header a {
 /* Add everything below here */
 
 #minehome {
+    height: 1000px;
     background-image: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url('images/minecraft-family-background.png');
 }
 
