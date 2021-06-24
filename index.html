@@ -34,8 +34,17 @@
                         les outils additionnels &agrave; votre disposition
                     </p>
                     <h3>Statut du serveur</h3>
-                    <img src="https://mcapi.us/server/image?ip=server.minecraft-family.ca" alt="Sorry! Image not available at this time" 
-                    onError="this.onerror=null;this.src='';">
+                    <div class="minecraft">
+                        <script src="scripts/server-status.js"></script>
+                        <img src="images/tnt_block.png" class="tnt-status-img">
+                        <div> 
+                            <div> 
+                                <div>Minecraft Family Server</div>
+                                <div class="statusText" id="ServerStatus"> ONLINE </div>
+                                <div class="onlinePlayers" id="onlinePlayers">1/20</div>
+                            </div>
+                        </div>
+                    </div>
                     <h3>Pr&eacute;requis pour se connecter au serveur Minecraft</h3>
                     <dir class="ulParent">
                         <dir class="list">

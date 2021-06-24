@@ -82,6 +82,38 @@ section {
     background-attachment: fixed; /* Add this line */
 }
 
+.minecraft {
+    background-image : url('images/dirt-backround.png');
+    color: #e8e8e8;
+    display: inline-flex;
+    font-family: 'Minecraft';
+    letter-spacing: 0.15em;
+    line-height: 20px;
+    padding: 0.5em;
+    text-align: left;
+    border-radius: 5px;
+}
+
+.tnt-status-img {
+    height: 85px;
+    margin-right: 10px;
+}
+
+.statusText {
+    color: #0A0;
+    text-align: center;
+    line-height: 1.8;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.onlinePlayers {
+    color: #afafaf;
+    text-align: center;
+    line-height: 1.5;
+}
+
+
 .discord {
     margin-top: 5px;
 }
