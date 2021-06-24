@@ -82,7 +82,7 @@ section {
     background-attachment: fixed; /* Add this line */
 }
 
-.minecraft {
+#serverStatus.minecraft {
     background-image : url('images/dirt-backround.png');
     color: #e8e8e8;
     display: inline-flex;
@@ -90,29 +90,101 @@ section {
     letter-spacing: 0.15em;
     line-height: 20px;
     padding: 0.5em;
-    text-align: left;
+    text-align: center;
     border-radius: 5px;
 }
 
-.tnt-status-img {
+.server-status {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.server-status-img {
     height: 85px;
     margin-right: 10px;
 }
 
-.statusText {
-    color: #0A0;
+.status-text {
     text-align: center;
     line-height: 1.8;
     font-weight: bold;
     font-size: x-large;
 }
 
-.onlinePlayers {
+.server {
+    width: 100%;
+    max-width: 850px;
+}
+
+.motd {
+    line-height: 25px;
+    padding-top: 10px;
+}
+
+.server.minecraft {
+    background-image : url('images/dirt-backround.png');
+    color: #e8e8e8;
+    display: inline-flex;
+    justify-content: space-between;
+    font-family: 'Minecraft';
+    letter-spacing: 0.15em;
+    line-height: 20px;
+    padding: 0.5em;
+    font-size: large;
+    text-align: left;
+    border-radius: 25px;
+}
+
+.server-img-container {
+    height: 85px;
+    width: 85px;
+    max-width: 100%;
+    margin-right: 10px;
+    overflow: hidden;
+}
+.server-img {
+    height: 100%;
+    width: 100%;
+    flex-grow: 0;
+    object-fit: cover;
+}
+
+.server-info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 750px;
+}
+
+.status-text {
+    text-align: center;
+    line-height: 1.8;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.online-players-separator {
+    color: rgb(94, 94, 94);
+}
+
+#ServerInfo.online-players {
+    color: #afafaf;
+    text-align: right;
+    line-height: 1.5;
+}
+
+#serverStatus .online-Players {
     color: #afafaf;
     text-align: center;
     line-height: 1.5;
 }
 
+.ping-img {
+    height: 20px;
+}
 
 .discord {
     margin-top: 5px;
@@ -208,3 +280,13 @@ header a {
     padding-bottom: 50px;
     padding-left: 80px;
 }
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+  }
