@@ -113,6 +113,13 @@ section {
     font-size: x-large;
 }
 
+.status-text {
+    text-align: center;
+    line-height: 1.8;
+    font-weight: bold;
+    font-size: x-large;
+}
+
 .online-players-separator {
     color: rgb(94, 94, 94);
 }
