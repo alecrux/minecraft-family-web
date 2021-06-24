@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Minecraft';
-    src: url('fonts/Minecraft.ttf');
+    src: url('fonts/Minecraft.otf');
 }
 
 body {
@@ -92,6 +92,7 @@ section {
     cursor: pointer;
     letter-spacing: 2px;
     font-family: Minecraft;
+    font-weight: bold;
     text-shadow: 1px 1px 0 #7A7A7A;
 }
 
