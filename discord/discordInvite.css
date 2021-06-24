@@ -44,14 +44,6 @@
     font-weight:700;
     src:url(https://discordapp.com/assets/8e12fb4f14d9c4592eb8ec9f22337b04.woff) format("woff")
 }
-.noselect{
-    -webkit-touch-callout:none;
-    -webkit-user-select:none;
-    -khtml-user-select:none;
-    -moz-user-select:none;
-    -ms-user-select:none;
-    user-select:none
-}
 #discordInviteBox{
     background-color:#37393e;
     display:inline-block

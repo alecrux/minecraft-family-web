@@ -83,6 +83,46 @@ section {
     background-attachment: fixed; /* Add this line */
 }
 
+#serverStatus.minecraft {
+    background-image : url('images/dirt-backround.png');
+    color: #e8e8e8;
+    display: inline-flex;
+    font-family: 'Minecraft';
+    letter-spacing: 0.15em;
+    line-height: 20px;
+    padding: 0.5em;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.server-status {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.server-status-img {
+    height: 85px;
+    margin-right: 10px;
+}
+
+.status-text {
+    text-align: center;
+    line-height: 1.8;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.online-players-separator {
+    color: rgb(94, 94, 94);
+}
+
+#serverStatus .online-Players {
+    color: #afafaf;
+    text-align: center;
+    line-height: 1.5;
+}
+
 .discord {
     margin-top: 5px;
 }
@@ -173,3 +213,13 @@ header a {
     padding-top: 50px;
     padding-bottom: 50px;
 }
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+  }

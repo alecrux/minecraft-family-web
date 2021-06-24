@@ -35,8 +35,15 @@
                     </h3>
                     <hr class="thick">  
                     <h3>Statut du serveur</h3>
-                    <img src="https://mcapi.us/server/image?ip=server.minecraft-family.ca" alt="Sorry! Image not available at this time" 
-                    onError="this.onerror=null;this.src='';">
+                    <div class="minecraft noselect" id="serverStatus">
+                        <script src="scripts/server-status.js"></script>
+                        <img src="images/tnt_block.png" class="server-status-img">
+                        <div class="server-status"> 
+                                <div>Minecraft Family Server</div>
+                                <div class="status-text" id="ServerStatusText" style="color: #A00;"> OFFLINE </div>
+                                <div class="online-Players" id="onlinePlayers">0<span class="online-players-separator">/</span></div>
+                        </div>
+                    </div>
                     <h3>Pr&eacute;requis pour se connecter au serveur Minecraft</h3>
                     <dir class="ulParent">
                         <dir class="list">
