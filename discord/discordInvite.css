@@ -9,7 +9,6 @@
     left:0;
     min-height:32px;
     min-width:73px;
-    position:relative;
     right:0;
     top:0;
     align-self:center;
@@ -44,14 +43,6 @@
     font-family:Whitney;
     font-weight:700;
     src:url(https://discordapp.com/assets/8e12fb4f14d9c4592eb8ec9f22337b04.woff) format("woff")
-}
-.noselect{
-    -webkit-touch-callout:none;
-    -webkit-user-select:none;
-    -khtml-user-select:none;
-    -moz-user-select:none;
-    -ms-user-select:none;
-    user-select:none
 }
 #discordInviteBox{
     background-color:#37393e;
@@ -91,7 +82,6 @@
     cursor:pointer;
     height:50px;
     left:0;
-    position:relative;
     right:0;
     top:0;
     width:50px;

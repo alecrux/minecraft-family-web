@@ -49,6 +49,7 @@ ul {
 .list {
     padding-top: 2.5px;
     padding-bottom: 2.5px;
+    padding-inline-start: 0px;
 }
 
 hr { 
@@ -222,7 +223,6 @@ section {
 #technicalities .thumbnail-img {
     height: 100px;
     margin-top: 5px;
-    border-radius: 25px;
 }
 
 #rules .thumbnail-img {
@@ -256,6 +256,7 @@ header a {
 /* Add everything below here */
 
 #minehome {
+    height: 1000px;
     background-image: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url('images/minecraft-family-background.png');
 }
 
@@ -265,9 +266,7 @@ header a {
     align-items: center;
     text-align: center;
     padding-top: 50px;
-    padding-right: 30px;
     padding-bottom: 50px;
-    padding-left: 80px;
 }
 
 #rules {
@@ -276,9 +275,7 @@ header a {
     align-items: center;
     text-align: center;
     padding-top: 50px;
-    padding-right: 30px;
     padding-bottom: 50px;
-    padding-left: 80px;
 }
 
 .noselect {
