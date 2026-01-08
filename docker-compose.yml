@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  minecraft-family-web:
+    build: .
+    container_name: minecraft-family-web
+    ports:
+      - "8080:80"
+    environment:
+      - TZ=America/Toronto
+    volumes:
+      - .:/usr/share/nginx/html:ro
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s

@@ -1,0 +1,25 @@
+# Git files
+.git
+.gitignore
+
+# IDE files
+.vscode
+.idea
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Dependencies
+node_modules
+package-lock.json
+yarn.lock
+
+# Build artifacts
+dist
+build
+*.log
+
+# OS files
+Thumbs.db
+.env.local
