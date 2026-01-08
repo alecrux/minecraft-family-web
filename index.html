@@ -1,70 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Minecraft Family Server</title>
         <link rel='icon' href='favicon.ico' type='image/x-icon'>
         <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap">
+        <script src="script.js"></script>
     </head>
 
     <body>
         <header>
-            <a href="index.html"><img src="images/tnt_block.png" class="profile-img"></a>
+            <a href="index.html" class="logo"><img src="images/tnt_block.png" alt="Minecraft Family Server Logo"></a>
             <nav>
                 <ul>
-                    <li><a href="#minehome">Home</a></li>
-                    <li><a href="#technicalities">Technicalities</a></li>
-                    <li><a href="#rules">Rules</a></li>
-                    <li><a href="#addons">Add ons</a></li>
-                    <li><a href="/mcmap" target="_blank">Dynamic Map</a></li>
-                    <li><a href="https://minecraft--family-ca.translate.goog/?_x_tr_sl=auto&_x_tr_tl=fr&_x_tr_hl=en&_x_tr_pto=wapp">Fran&ccedil;ais </a></li>
+                    <li><a href="#minehome" data-i18n="home">Home</a></li>
+                    <li><a href="#technicalities" data-i18n="technicalities">Technicalities</a></li>
+                    <li><a href="#rules" data-i18n="rules">Rules</a></li>
+                    <li><button id="lang-toggle" data-i18n="language">Français</button></li>
                 </ul>
             </nav>
         </header>
         <main>
             <section id="minehome">
                 <div class="section-inner">
-                    <img src="images/tnt_block.png" class="profile-img">
-                    <h1>Welcome to the Minecraft Family Server</h1>
+                    <img src="images/tnt_block.png" alt="TNT Block Logo" class="profile-img">
+                    <h1 data-i18n="welcome_title">Welcome to the Minecraft Family Server</h1>
                 </div>
             </section>
             <section id="technicalities">
                 <div class="section-inner">
                   <section id="technicalities-content">
                     <div class="section-inner">
-                      <h2>Technicalities</h2>
-                      <h3>Everything you need to connect to the server and understand which additional tools are available to you</h3>
+                      <h2 data-i18n="technicalities_title">Technicalities</h2>
+                      <h3 data-i18n="technicalities_subtitle">Everything you need to connect to the server and understand which additional tools are available to you</h3>
                       <hr>
-                      <h3>Server Status</h3>
-                      <img src="https://mcapi.us/server/image?ip=server.minecraft-family.ca" class="server-status-img">
+                      <h3 data-i18n="server_status">Server Status</h3>
+                      <img src="https://mcapi.us/server/image?ip=server.minecraft-family.ca" alt="Server Status" class="server-status-img">
                       <br><br>
                       <hr>  
-                      <h3>How to connect to the server</h3>
+                      <h3 data-i18n="how_to_connect">How to connect to the server</h3>
                       <ul>
-                        <li>You need a Minecraft client. Any client will work (<a href="https://www.minecraft.net/en-us/download" target="_blank">native</a>, <a href="https://multimc.org/" target="_blank">MultiMC</a>, <a href="https://client.badlion.net/" target="_blank">Badlion</a>, etc.) as long as it's <b>Java</b>.</li>
-                        <li>The current version of the server is <b>1.19.4</b>. It is very important for your client to run the exact same version than the server</li>
-                        <li>Your Minecraft Player needs to be approved (whitelisted) on the server. Ask a friend or join the Discord server (link down below) if you want be authorized on the server.</li>
+                        <li data-i18n="client_requirement">You need a Minecraft client. Any client will work (native, MultiMC, Badlion, etc.) as long as it's Java.</li>
+                        <li data-i18n="version_requirement">The current version of the server is 1.19.4. It is very important for your client to run the exact same version than the server</li>
+                        <li data-i18n="whitelist_requirement">Your Minecraft Player needs to be approved (whitelisted) on the server. Ask a friend or join the Discord server (link down below) if you want be authorized on the server.</li>
                       </ul>
                       <p>
-                        Once in-game you need to connect to a new server.<br>
-                        The address of the server is: <b>server.minecraft-family.ca</b><br><br>
-                        In the Multiplayer section of the game, it should look like this:<br><br>
-                        <img src="images/add_server_ingame.png">
+                        <span data-i18n="connect_instructions">Once in-game you need to connect to a new server.</span><br>
+                        <span data-i18n="server_address">The address of the server is: server.minecraft-family.ca</span><br><br>
+                        <span data-i18n="multiplayer_example">In the Multiplayer section of the game, it should look like this:</span><br><br>
+                        <img src="images/add_server_ingame.png" alt="In-game server setup example">
                       </p>
                       <p>
                         <hr>
-                        <img src="images/discord.png" class="thumbnail-img"><br><br>
-                        <h3>Here are the reasons why it's important to join the Discord Community</h3>
+                        <img src="images/discord.png" alt="Discord Logo" class="thumbnail-img"><br><br>
+                        <h3 data-i18n="discord_importance">Here are the reasons why it's important to join the Discord Community</h3>
                         <ul>
-                          <li>See how much fun other players are having</li>
-                          <li>Watch Familybot get busy when something happens on the server (player joins, player dies...). His favorite channel is <b>#familybot-is-chatty</b></li>
-                          <li>Chat and talk with other players outside of the game</li>
-                          <li>Share your best screenshots</li>
-                          <li>Know all about the server status (planned maintenances, upgrades)</li>
-                          <li>And much more!</li>
+                          <li data-i18n="discord_reason_1">See how much fun other players are having</li>
+                          <li data-i18n="discord_reason_2">Watch Familybot get busy when something happens on the server (player joins, player dies...). His favorite channel is #familybot-is-chatty</li>
+                          <li data-i18n="discord_reason_3">Chat and talk with other players outside of the game</li>
+                          <li data-i18n="discord_reason_4">Share your best screenshots</li>
+                          <li data-i18n="discord_reason_5">Know all about the server status (planned maintenances, upgrades)</li>
+                          <li data-i18n="discord_reason_6">And much more!</li>
                         </ul>
-                        Click on <a href="https://discord.com/invite/tUnGWUFXv7" target="_blank">this Link</a> to join the Discord Community.<br>
-                        Once you join the Discord Server, you will be restricted to <b>#Lobby</b> channel until an administrator grants you access to the rest of the Discord Server
+                        <span data-i18n="discord_join">Click on this Link to join the Discord Community.</span> <a href="https://discord.com/invite/tUnGWUFXv7" target="_blank" data-i18n="discord_link_text">this Link</a><br>
+                        <span data-i18n="discord_lobby">Once you join the Discord Server, you will be restricted to #Lobby channel until an administrator grants you access to the rest of the Discord Server</span>
                       </p>
                     </div>
                   </section>
@@ -74,73 +75,36 @@
               <div class="section-inner">
                 <section id="rules-content">
                   <div class="section-inner">
-                    <h2>Rules</h2>
-                    <img src="images/justice.png" class="thumbnail-img"><br><br>
-                    <h3>For maximum fun, here are some simple rules that we all need to follow</h3>
+                    <h2 data-i18n="rules_title">Rules</h2>
+                    <img src="images/justice.png" alt="Justice Icon" class="thumbnail-img"><br><br>
+                    <h3 data-i18n="rules_subtitle">For maximum fun, here are some simple rules that we all need to follow</h3>
                     <ul>
-                      <li>Create your base at a reasonable distance from the other players (say 500+ blocks). Some of your neighbors might be eager to expand! Always remember the Nether is here for traveling quickly from base to base.</li>
-                      <li>Visit the world, marvel at the creations of others! But a creeper just exploded in your face, and it has damaged something that does not belong to you? Fill up the hole, repair the damage. It's really not possible? Leave an apology, mistakes happen.</li>
-                      <li>Also, don't modify other people's creations without their permission.</li>
-		      <li>In a same way, never ever steal inside others chests, even if they are not hidden.</li>
-                      <li>Use whatever client mods you want, as long as it does not impact the other player's experience.</li>
-                      <li>PVP is enabled on the server, but don't kill other players without their consent.</li>
-                      <li>You are in a mood for a good battle? Head over to the <a href="https://minecraft-family.ca/mcmap/#/1601/64/-187/max/family-server-world%20-%20overworld/familyserverday" target="_blank">PVP Arena</a> and have some fun!</li>
-                      <li>Don't loot community farms (e.g. the <a href="https://minecraft-family.ca/mcmap/#/-269/64/-385/max/family-server-world%20-%20overworld/familyserverday" target="_blank">unlimited iron farm</a>). Take only what you need for your projects, leave some for others.</li>
-                      <li>You want to submit an idea, need an upgrade, want to organize an event like a PVP fight, post in the Channel Discord called <b>#suggestions</b></li>
-                      <li>A question, need help with the server, a trusted friend wants to join? Ask <b>Freetonio</b></li>
-                      <li>Respect the "bubble" of the players when they don't want to be bothered at home.</li>
-                      <li>Be polite and respectful to each other.</li>
-                      <li>Any misuse of language, or bad attitude will be punished</li>
+                      <li data-i18n="rule_1">Create your base at a reasonable distance from the other players (say 500+ blocks). Some of your neighbors might be eager to expand! Always remember the Nether is here for traveling quickly from base to base.</li>
+                      <li data-i18n="rule_2">Visit the world, marvel at the creations of others! But a creeper just exploded in your face, and it has damaged something that does not belong to you? Fill up the hole, repair the damage. It's really not possible? Leave an apology, mistakes happen.</li>
+                      <li data-i18n="rule_3">Also, don't modify other people's creations without their permission.</li>
+		      <li data-i18n="rule_4">In a same way, never ever steal inside others chests, even if they are not hidden.</li>
+                      <li data-i18n="rule_5">Use whatever client mods you want, as long as it does not impact the other player's experience.</li>
+                      <li data-i18n="rule_6">PVP is enabled on the server, but don't kill other players without their consent.</li>
+                      <li data-i18n="rule_7">You are in a mood for a good battle? Head over to the PVP Arena and have some fun!</li>
+                      <li data-i18n="rule_8">Don't loot community farms (e.g. the unlimited iron farm). Take only what you need for your projects, leave some for others.</li>
+                      <li data-i18n="rule_9">You want to submit an idea, need an upgrade, want to organize an event like a PVP fight, post in the Channel Discord called #suggestions</li>
+                      <li data-i18n="rule_10">A question, need help with the server, a trusted friend wants to join? Ask Freetonio</li>
+                      <li data-i18n="rule_11">Respect the "bubble" of the players when they don't want to be bothered at home.</li>
+                      <li data-i18n="rule_12">Be polite and respectful to each other.</li>
+                      <li data-i18n="rule_13">Any misuse of language, or bad attitude will be punished</li>
                       <ul>
-                        <li>First by a warning to the player at fault</li>
-                        <li>Then by a ban more or less long depending on the importance of the fault</li>
-                        <li>Any third offence is sanctionned by a permanent ban.</li>
+                        <li data-i18n="rule_13_1">First by a warning to the player at fault</li>
+                        <li data-i18n="rule_13_2">Then by a ban more or less long depending on the importance of the fault</li>
+                        <li data-i18n="rule_13_3">Any third offence is sanctionned by a permanent ban.</li>
                       </ul>
-                      <li>"TRUST BUT VERIFY". Remember that all actions of all players are recorded at all times by the server for eternity!</li>
+                      <li data-i18n="rule_14">"TRUST BUT VERIFY". Remember that all actions of all players are recorded at all times by the server for eternity!</li>
                     </ul>
-                    <p>The most important rule of all:  <b>Have Fun!</b></p>
+                    <p><strong data-i18n="most_important_rule">The most important rule of all: Have Fun!</strong></p>
                   </div>
                 </section>
               </div>
           </section>
-          <section id="addons">
-            <div class="section-inner">
-              <section id="addons-content">
-                <div class="section-inner">
-                  <h2>Add ons</h2>
-                  <h3>Dynamic world map</h3>
-                  The dynamic world map is available in the menu or <a href="/mcmap" target="_blank">here</a>
-                  <h4>How to get your points of interest in the Dynamic world map</h4>
-                  Three type of points of interest are currently supported:
-                  <ul>
-                    <li>Base</li>
-                    <li>Farm</li>
-                    <li>Landmark</li>
-                  </ul>
-                  To add a tag on the map, you need to get in the game.<br>
-                  Then, place a sign made of any wood and write the type of tag in brackets on the first line (for example [Base]) and the text you want to be displayed on the world map in the following three lines<br>
-                  <p>For example:</p>
-                  <img src="images/poi-example.png" class="thumbnail-img"><br>
-                  <h4>How to remove your points of interest from the Dynamic world map</h4>
-                  Simply remove the sign in-game.
-                  <h4>How much time does it take for a POI to show-up on the Dynamic Map?</h4>
-                  The map is updated once a day during the night, north America time.
-                  <br><br>
-                  <hr>
-                  <h3>Plugins</h3>
-                  <ul>
-                    <li>When a mob or a player is killed, his head will sometimes fall on the ground (collect them or use them to decorate your buildings!)</li>
-                    <li>50% of the players must sleep for the night to pass</li>
-                    <li>It is possible to teleport directly to your home from anywhere on the server. Use the /sethome command to set the coordinates of your house. Use the command /home to teleport to your house. Be careful, this command costs 50$.</li>
-                    <li>If you want to join a friend quickly on the server the commands /tpa, /tpaccept and /tpdeny are available. These commands are free.</li>
-                    <li>There is a currency plugin. It is especially useful when you have extra resources that you want to sell. Then buy rare items from the marketplace or use special orders that cost money. Watch this video to understand how that plugin works:</li>
-                  </ul>
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/QtEE_f410x0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-              </section>
-            </div>
-        </section>
         </main> 
-        <footer>Built quickly, but with love by Freetonio, server operator. <br> With the help of Nilon</footer>
+        <footer data-i18n="footer">Built quickly, but with love by Freetonio, server operator. With the help of Nilon</footer>
     </body>
 </html>

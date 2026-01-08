@@ -1,36 +1,106 @@
+:root {
+    --primary-color: #1e3a8a;
+    --secondary-color: #10b981;
+    --accent-color: #f59e0b;
+    --dark-bg: #0f172a;
+    --light-bg: #f8fafc;
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --border-color: #e2e8f0;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
-    margin-top: 50px;
-    font-family: 'DM Sans', sans-serif;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-primary);
+    line-height: 1.6;
 }
 
 header {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    height: 50px;
-    line-height: 50px;
-    background-color: #eee;
+    height: 70px;
+    background: linear-gradient(135deg, var(--dark-bg) 0%, var(--primary-color) 100%);
+    box-shadow: var(--shadow-lg);
+    z-index: 1000;
+    padding: 0 2rem;
 }
 
-header * {
-    display: inline;
-    height: 50px;
-}
-
-header a {
+header a.logo {
+    display: flex;
+    align-items: center;
     text-decoration: none;
-    color: black;
+    gap: 1rem;
 }
 
-header li {
-    margin-left: 20px;
+header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
 }
 
-ul {
-   padding-inline-start:  20px;
+header img:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+nav a:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+#lang-toggle {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.95rem;
+}
+
+#lang-toggle:hover {
+    background-color: #f59e0b;
+    transform: translateY(-2px);
+}
+
+main {
+    margin-top: 70px;
 }
 
 section {
@@ -42,105 +112,216 @@ section {
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    border: none;
+    padding: 60px 2rem;
 }
 
 section h1 {
-    font-size: 3em;
+    font-size: clamp(2rem, 8vw, 3.5em);
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -1px;
 }
 
 section h2 {
-    font-size: 2.5em;
+    font-size: clamp(1.8rem, 5vw, 2.8em);
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+    color: var(--primary-color);
 }
 
 section h3 {
-    font-size: 1.5em;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin: 0.5rem 0;
 }
 
 section h4 {
-    font-size: 1em;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+section h4 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.section-inner {
+    width: 100%;
+    max-width: 700px;
+}
+
+ul {
+    padding-left: 1.5rem;
+    text-align: left;
+}
+
+ul li {
+    margin: 0.8rem 0;
+    color: var(--text-primary);
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--secondary-color), transparent);
+    margin: 2rem 0;
 }
 
 footer {
     text-align: center;
-    padding: 50px;
+    padding: 50px 20px;
+    background: var(--dark-bg);
+    color: white;
+    margin-top: 40px;
+    font-size: 0.95rem;
+    line-height: 1.8;
 }
 
 #minehome {
-    border: 1px solid black;
-    height: 1000px;
-    background-image: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url('images/minecraft-family-background.png');
+    min-height: 100vh;
+    background-image: linear-gradient(135deg, rgba(30, 58, 138, 0.85), rgba(16, 185, 129, 0.85)), url('images/minecraft-family-background.png');
+    color: white;
+}
+
+#minehome h1 {
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 #minehome .profile-img {
-    width: 300px;
-    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-lg);
+    transition: transform 0.3s ease;
+    border: 4px solid white;
+}
+
+#minehome .profile-img:hover {
+    transform: scale(1.05);
 }
 
 #technicalities {
-    border: 1px solid black;
-    background-image: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url('images/morning-statue-background.png');
-    padding-top: 50px;
-    padding-bottom: 50px;
+    background-image: linear-gradient(135deg, rgba(248, 250, 252, 0.95), rgba(248, 250, 252, 0.95)), url('images/morning-statue-background.png');
+    padding: 80px 20px;
 }
 
 #technicalities-content {
-    margin-left: auto;
-    margin-right: auto;
-    width: 50em;
-    justify-content: left;
-    align-items: left;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
     text-align: left;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    max-width: 700px;
 }
 
 #technicalities .thumbnail-img {
-    height: 100px;
-    margin-top: 5px;
+    height: 150px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
 }
 
 #rules {
-    border: 1px solid black;
-    background-image: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url('images/night-base-background.png');
-    padding-top: 50px;
-    padding-bottom: 50px;
+    background-image: linear-gradient(135deg, rgba(248, 250, 252, 0.95), rgba(248, 250, 252, 0.95)), url('images/night-base-background.png');
+    padding: 80px 20px;
 }
 
 #rules-content {
-    margin-left: auto;
-    margin-right: auto;
-    width: 50em;
-    justify-content: left;
-    align-items: left;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
     text-align: left;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    max-width: 700px;
+}
+
+#rules-content h2 {
+    color: var(--primary-color);
 }
 
 #rules .thumbnail-img {
-    height: 300px;
-    margin-top: 5px;
+    height: 250px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    object-fit: cover;
 }
 
-#addons {
-    border: 1px solid black;
-    background-image: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url('images/avionpapilaps_base.png');
-    padding-top: 50px;
-    padding-bottom: 50px;
+.server-status-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    margin: 20px 0;
 }
 
-#addons-content {
-    margin-left: auto;
-    margin-right: auto;
-    width: 50em;
-    justify-content: left;
-    align-items: left;
-    text-align: left;
-    padding-top: 50px;
-    padding-bottom: 50px;
+iframe {
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    margin: 20px 0;
 }
 
-#addons .thumbnail-img {
-    height: 100px;
-    margin-top: 5px;
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    nav a {
+        display: block;
+        padding: 0.8rem;
+        text-align: center;
+    }
+
+    main {
+        margin-top: auto;
+    }
+
+    section {
+        padding: 40px 1rem;
+    }
+
+    #technicalities-content,
+    #rules-content {
+        padding: 25px;
+        max-width: 100%;
+    }
+
+    section h1 {
+        font-size: clamp(1.5rem, 6vw, 2.5em);
+    }
+
+    section h2 {
+        font-size: clamp(1.3rem, 4vw, 2em);
+    }
+
+    #minehome .profile-img {
+        width: 150px;
+        height: 150px;
+    }
 }
